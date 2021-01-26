@@ -1,21 +1,7 @@
 from ..elements import Element
 from ..cards import Card, BadCardError
+from ..shapes import Polygon
 
-
-def make_polygon(id_num, colour, points):
-    d_value = "M "
-    for x, y in points:
-        d_value += f"{x},{y} "
-    d_value += "Z"
-    num_points = len(points)
-    poly_name = {
-        3: "triangle",
-        4: "quad",
-    }.get(num_points, f"poly{num_points}")
-    return Element(
-        "path", fill=colour, stroke="none", d=d_value, id=f"{poly_name}-{id_num}",
-        self_closing=True
-    )
 
 class HalfDiagonalCard(Card):
     # stripes SW-NE in top/left half
@@ -38,14 +24,14 @@ class HalfDiagonalCard(Card):
         # always have the triangle
         triangle_indices = [(0, 0), (1, 0), (0, 1)]
         diagonal_elements = [
-            make_polygon(0, colours[0],
+            Polygon(0, colours[0],
             points=list(map(get_coords, triangle_indices)))
         ]
 
         for idx in range(1, num_colours):
             quad_indices = [(0, idx), (idx, 0), (idx+1, 0), (0, idx+1)]
             diagonal_elements += [
-                make_polygon(0, colours[idx],
+                Polygon(0, colours[idx],
                 points=list(map(get_coords, quad_indices)))
             ]
         

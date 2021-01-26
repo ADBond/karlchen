@@ -1,6 +1,6 @@
 # Karlchen
 
-A simple python package to generate `.svg` files for playing-card backs, with a few variants/options.
+'''Karlchen''' is a simple python package to generate `.svg` files for playing-card backs, with a few variants/options.
 
 ## Usage
 
@@ -12,6 +12,8 @@ Example files were generated via
 ```bash
 python generate_examples.py
 ```
+
+That should give a reasonable idea of how to use until more detailed instructions are available.
 
 
 ## Playing card dimensions
