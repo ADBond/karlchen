@@ -17,6 +17,11 @@ text = Element(
 example_svg = SVG(children=[rect, circle, text])
 example_svg.to_file("example_generated")
 
-plain_card = Card()
+plain_card = Card(design_base_colour="#ff0000")
 plain_card.to_file("plain_card")
 
+plain_card_alt_dims = Card(
+    width=59, height=92, outer_margin=3,
+    outline_thickness=5, design_base_colour="#800080"
+)
+plain_card_alt_dims.to_file("plain_card_alt_dims")

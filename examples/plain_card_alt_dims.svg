@@ -1,0 +1,22 @@
+<svg
+   version="1.1"
+   baseProfile="full"
+   width="59"
+   height="92"
+   xmlns="http://www.w3.org/2000/svg">
+  <g
+     style="display:inline">
+    <rect
+       style="display:inline;fill:#000000;fill-rule:evenodd;stroke-width:0"
+       width="53"
+       height="86"
+       x="3"
+       y="3" />
+    <rect
+       style="display:inline;fill:#800080;fill-rule:evenodd;stroke-width:0"
+       width="43"
+       height="76"
+       x="8"
+       y="8" />
+  </g>
+</svg>

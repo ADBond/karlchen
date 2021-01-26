@@ -3,25 +3,24 @@ from .elements import Element, SVG
 
 class Card(SVG):
 
-    def __init__(self, width=72, height=96, inner_width=54, outer_height=78, outline_thickness=2, design_elements=[]):
+    def __init__(self, width=72, height=96, outer_margin=7, outline_thickness=2,
+                 outline_colour="#000000", design_base_colour="#ffffff", design_elements=[]):
 
-        # TODO: sizes
         outer_rectangle = Element(
             "rect", id="outer_rectangle", self_closing=True,
-            style="display:inline;fill:#000000;fill-rule:evenodd;stroke-width:0",
-            width=58,
-            height=82,
-            x=7,
-            y=7
+            style=f"display:inline;fill:{outline_colour};fill-rule:evenodd;stroke-width:0",
+            width=width - 2*outer_margin,
+            height=height - 2*outer_margin,
+            x=outer_margin,
+            y=outer_margin
         )
-        inner_colour = "#ff0000"
         inner_rectangle = Element(
             "rect", id="inner_rectangle", self_closing=True,
-            style=f"display:inline;fill:{inner_colour};fill-rule:evenodd;stroke-width:0",
-            width=54,
-            height=78,
-            x=9,
-            y=9
+            style=f"display:inline;fill:{design_base_colour};fill-rule:evenodd;stroke-width:0",
+            width=width - 2*outer_margin - 2*outline_thickness,
+            height=height - 2*outer_margin - 2*outline_thickness,
+            x=outer_margin + outline_thickness,
+            y=outer_margin + outline_thickness
         )
 
         outline_grouping = Element(
