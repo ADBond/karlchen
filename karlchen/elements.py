@@ -45,3 +45,12 @@ class Element():
         file_path = path.join(location, f"{name}.svg")
         with open(file_path, "w+") as svg_file:
             svg_file.write(self.to_string())
+
+class SVG(Element):
+
+    def __init__(self, id=None, children=[], width=300, height=200, **kwargs):
+        super().__init__(
+            "svg", id=id, children=children,
+            version="1.1", baseProfile="full", width=width, height=height, xmlns="http://www.w3.org/2000/svg",
+            **kwargs
+        )
