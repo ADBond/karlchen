@@ -1,4 +1,5 @@
 from karlchen.elements import Element, SVG
+from karlchen.cards import Card
 
 rect = Element(
     "rect", id="rectangle-1", self_closing=True, split_lines=False,
@@ -14,5 +15,8 @@ text = Element(
     x="150", y="125", fill="white", **{"font-size": "60", "text-anchor": "middle"}
 )
 example_svg = SVG(children=[rect, circle, text])
-
 example_svg.to_file("example_generated")
+
+plain_card = Card()
+plain_card.to_file("plain_card")
+
