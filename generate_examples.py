@@ -1,5 +1,6 @@
 from karlchen.elements import Element, SVG
 from karlchen.cards import Card
+from karlchen.templates.half_diagonal import HalfDiagonalCard
 
 rect = Element(
     "rect", id="rectangle-1", self_closing=True, split_lines=False,
@@ -25,3 +26,12 @@ plain_card_alt_dims = Card(
     outline_thickness=5, design_base_colour="#800080"
 )
 plain_card_alt_dims.to_file("plain_card_alt_dims")
+
+blue_white_card = HalfDiagonalCard(colours=["#0000ff"])
+blue_white_card.to_file("blue_white_diag")
+
+calypso_default_design_card = HalfDiagonalCard(
+    colours=["#ff00ff", "#ffff00", "#00ff00", "#0000ff", "#ff0000"],
+    design_base_colour="#000000"
+)
+calypso_default_design_card.to_file("calypso_back")

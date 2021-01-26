@@ -3,14 +3,14 @@ from os import path
 def space_string(length):
     return "".join([" " for i in range(length)])
 
-class BadElement(Exception):
+class BadElementError(Exception):
     pass
 
 class Element():
 
     def __init__(self, element_name, id=None, self_closing=False, children=[], split_lines=True, **kwargs):
         if self_closing and children:
-            raise BadElement("Self-closing tags cannot have children")
+            raise BadElementError("Self-closing tags cannot have children")
         self.element_name = element_name
         self.id = id if id is not None else "TODO"
         self.children = children
