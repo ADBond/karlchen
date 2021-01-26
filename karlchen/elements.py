@@ -1,4 +1,4 @@
-from os import path
+from os import path, mkdir
 
 def space_string(length):
     return "".join([" " for i in range(length)])
@@ -41,8 +41,11 @@ class Element():
     def to_string(self):
         return "\n".join(self.string_lines(0))
 
-    def to_file(self, name, location="./examples"):
-        file_path = path.join(location, f"{name}.svg")
+    def to_file(self, name, location="./examples", sub_folder="."):
+        file_location = file_path = path.join(location, f"{sub_folder}")
+        if not path.isdir(file_location):
+            mkdir(file_location)
+        file_path = path.join(file_location, f"{name}.svg")
         with open(file_path, "w+") as svg_file:
             svg_file.write(self.to_string())
 
