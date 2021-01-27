@@ -13,8 +13,11 @@ Example files were generated via
 python generate_examples.py
 ```
 
-That should give a reasonable idea of how to use until more detailed instructions are available.
+That [script](./generate_examples.py) should give a reasonable idea of how to use until more detailed instructions are available.
 
+![Plain purple back](./examples/plain_cards/plain_card_alt_dims.svg)
+![Italian flavoured design](./examples/diagonals/italian_flavoured.svg)
+![Semi-striped design](./examples/diagonals/semi_barbershop.svg)
 
 ## Playing card dimensions
 

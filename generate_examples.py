@@ -52,6 +52,6 @@ greyscale_card.to_file("greydiant", sub_folder="diagonals")
 
 italian_flavoured_card = DiagonalCard(
     colours=[["#CD212A", "#F4F5F0", "#008C45"][i % 3] for i in range(24)],
-    outline_thickness=3,
+    outline_thickness=3, outer_margin=5,
 )
 italian_flavoured_card.to_file("italian_flavoured", sub_folder="diagonals")
