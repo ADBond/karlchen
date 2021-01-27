@@ -1,6 +1,8 @@
 from karlchen.elements import Element, SVG
 from karlchen.cards import Card
-from karlchen.templates.half_diagonal import HalfDiagonalCard
+from karlchen.templates.diagonals import (
+    HalfDiagonalCard, DiagonalCard,
+)
 
 rect = Element(
     "rect", id="rectangle-1", self_closing=True, split_lines=False,
@@ -41,3 +43,15 @@ very_stripy_card = HalfDiagonalCard(
     design_base_colour="#ff6666"
 )
 very_stripy_card.to_file("semi_barbershop", sub_folder="diagonals")
+
+
+greyscale_card = DiagonalCard(
+    colours=["#333333", "#666666", "#999999", "#CCCCCC"]
+)
+greyscale_card.to_file("greydiant", sub_folder="diagonals")
+
+italian_flavoured_card = DiagonalCard(
+    colours=[["#CD212A", "#F4F5F0", "#008C45"][i % 3] for i in range(24)],
+    outline_thickness=3,
+)
+italian_flavoured_card.to_file("italian_flavoured", sub_folder="diagonals")
