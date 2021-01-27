@@ -16,6 +16,9 @@ class Card(SVG):
 
         self.design_offset = outer_margin + outline_thickness
 
+        # TODO: get/set design element on this and update - should make things a bit more composable
+        # e.g. create some design, get its element and then overlay
+
         base = Element(
             "rect", id="base", self_closing=True,
             style=f"display:inline;fill:#ffffff;stroke-width:0",

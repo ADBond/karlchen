@@ -18,6 +18,9 @@ class Element():
         self.self_closing = self_closing
         self.split_lines = split_lines
 
+        # probably a better place this could live
+        self.karlchen_version = "0.1"
+
     def string_lines(self, overall_indent=0):
         element_lines = [f"<{self.element_name}"]
         attribute_indent = 3
@@ -47,7 +50,7 @@ class Element():
             mkdir(file_location)
         file_path = path.join(file_location, f"{name}.svg")
         with open(file_path, "w+") as svg_file:
-            svg_file.write(self.to_string())
+            svg_file.write(f"<!-- Generated with Karlchen v{self.karlchen_version} -->\n{self.to_string()}")
 
 class SVG(Element):
 

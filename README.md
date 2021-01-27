@@ -2,6 +2,20 @@
 
 '''Karlchen''' is a simple python package to generate `.svg` files for playing-card backs, with a few variants/options.
 
+## Version
+
+* 0.1 (26/1/21)
+
+## Features
+
+All cards use customisable dimensions for overall shape, margin, outline and actual design area.
+
+Currently implemented designs:
+
+* Plain colour
+* SW-NE diagonal stripes in top-left half
+* SW-NE diagonal stripes across entire design
+
 ## Usage
 
 
