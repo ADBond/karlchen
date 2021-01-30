@@ -4,7 +4,7 @@
 
 ## Version
 
-* 0.1 (26/1/21)
+* 0.1 (26/1/21 - basic functionality)
 
 ## Features
 
