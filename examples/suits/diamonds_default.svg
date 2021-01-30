@@ -1,0 +1,12 @@
+<!-- Generated with Karlchen v0.1 -->
+<svg
+   version="1.1"
+   baseProfile="full"
+   width="500"
+   height="600"
+   xmlns="http://www.w3.org/2000/svg">
+  <path
+     fill="#D40000"
+     stroke="none"
+     d="M 220.0,20 l -200.0,250.0 l 200.0,250.0 l 200.0,-250.0 l -200.0,-250.0 Z" />
+</svg>

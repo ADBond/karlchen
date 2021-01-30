@@ -1,4 +1,4 @@
-from karlchen.suits import Heart
+from karlchen.suits import Heart, Diamond
 
 heart_svg = Heart()
 heart_svg.to_file("hearts_default", sub_folder="suits")
@@ -15,3 +15,6 @@ heart_svg = Heart(
     top_roundiness_vert=40,
 )
 heart_svg.to_file("hearts", sub_folder="suits")
+
+diamonds_svg = Diamond()
+diamonds_svg.to_file("diamonds_default", sub_folder="suits")
